@@ -6,6 +6,12 @@ const App = () => {
    const handleClick=(e) =>{
     setResult(result.concat(e.target.name));
    }
+   const clear=() =>{
+    setResult("")
+   }
+   const backspace =() =>{
+
+   }
   return (
     <>
       <div className="container">
@@ -16,8 +22,8 @@ const App = () => {
        </form>
 
        <div className="keypad">
-          <button onClick={handleClick}>Clear</button>
-          <button onClick={handleClick}>AC</button>
+          <button onClick={clear} id="clear">Clear</button>
+          <button onClick={backspace} id="backspace">AC</button>
           <button name ="/" onClick={handleClick}>&divide;</button>
           <button name ="7" onClick={handleClick}>7</button>
           <button name ="8" onClick={handleClick}>8</button>
