@@ -10,7 +10,7 @@ const App = () => {
     setResult("")
    }
    const backspace =() =>{
-
+    setResult(result.slice(0,result.length-1));
    }
   return (
     <>
@@ -22,7 +22,7 @@ const App = () => {
        </form>
 
        <div className="keypad">
-          <button onClick={clear} id="clear">Clear</button>
+          <button className="highlight" onClick={clear} id="clear">Clear</button>
           <button onClick={backspace} id="backspace">AC</button>
           <button name ="/" onClick={handleClick}>&divide;</button>
           <button name ="7" onClick={handleClick}>7</button>
@@ -39,7 +39,7 @@ const App = () => {
           <button name ="+" onClick={handleClick}>+</button>
           <button name ="0" onClick={handleClick}>0</button>
           <button name ="." onClick={handleClick}>.</button>
-          <button onClick={handleClick}>=</button>
+          <button onClick={handleClick} id="result">=</button>
        </div>
      </div>
     </>
